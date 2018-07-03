@@ -1,0 +1,21 @@
+entity Blog {
+	title String required minlength(3),
+	content TextBlob required,
+	date Instant required,
+	author String required minlength(3),
+    readersGroups String[],
+    adminsGroups String[] required,
+    tags String[]
+}
+
+entity BlogPost {
+	title String required minlength(3),
+	content TextBlob required,
+	date Instant required,
+	author String required minlength(3),
+    readersGroups String[],
+    adminsGroups String[] required,
+    tags String[]
+}
+
+paginate BlogEntry with infinite-scroll
